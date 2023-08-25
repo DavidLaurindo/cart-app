@@ -1,12 +1,13 @@
 import Header from "./components/Header/Header";
 import Products from "./components/Products/Products";
+import Provider from "./contexts/Provider";
 
 function App() {
-  return(
-    <div>
+  return (
+    <Provider>
       <Header />
       <Products />
-    </div>
+    </Provider>
   )
 }
 

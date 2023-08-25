@@ -1,13 +1,15 @@
-import { useEffect, useState } from "react"
+import { useContext, useEffect, useState } from "react"
 import fetchProducts from "../../api/fetchProducts"
 import './Products.css'
 import ProductCard from "../ProductCard/ProductCard"
+import ProductContext from "../../contexts/ProductContext"
+
 
 function Products() {
-    const [products, setProducts] = useState([])
+    const { products, setProducts } = useContext(ProductContext)
 
     useEffect(() => {
-        fetchProducts('iphone').then((response) => {
+        fetchProducts("iphone").then((response) => {
             setProducts(response)
         })
     }, [])
