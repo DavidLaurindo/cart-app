@@ -5,11 +5,12 @@ function Provider( { children }){
     const [products, setProducts] = useState([])
     const [cartItems, setCartItems] = useState([])
 
+
     const value={
         products,
         setProducts,
         cartItems,
-        setCartItems
+        setCartItems,
     }
 
     return(

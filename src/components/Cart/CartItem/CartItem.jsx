@@ -1,4 +1,4 @@
-import { useContext, useState } from "react"
+import { useContext } from "react"
 import ProductContext from "../../../contexts/ProductContext"
 
 function CartItem( { data } ) {
@@ -13,6 +13,24 @@ function CartItem( { data } ) {
     function mais(){
         const updateCartItem = cartItems.map((item) => item === data ? {...item, qty: item.qty + 1} : item)
         setCartItems(updateCartItem)
+    } 
+    
+    function updatePrice(preco, quantidade){
+        const unidadeValor = preco * quantidade
+        return unidadeValor.toLocaleString(
+            'pt-br', {
+                style: 'currency',
+                currency: 'BRL',
+            }
+        )
+    }
+    function normalPrice(){
+        return price.toLocaleString(
+            'pt-br', {
+                style: 'currency',
+                currency: 'BRL',
+            }
+        )
     }
 
     return (
@@ -20,7 +38,7 @@ function CartItem( { data } ) {
             <img src={thumbnail} alt="imagem do produto" />
             <div>
                 <h3>{title}</h3>
-                <h3>{qty === 1 ? price : price * qty}</h3>
+                <h3>{qty === 1 ? normalPrice() : updatePrice(price, qty) }</h3>
                 <p>{qty}</p>
             </div>
 
