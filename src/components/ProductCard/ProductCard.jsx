@@ -8,7 +8,8 @@ function ProductCard({ data }) {
 
     const handleAddCart = () => {
 
-        const existingCartItem = cartItems.find(item => item.id === id);
+        //Verifica se existe o produto comparando o id
+        const existingCartItem = cartItems.find(itemArray => itemArray.id === id);
 
         if (existingCartItem) {
             // Se o produto já existe no carrinho, incrementa a quantidade
@@ -32,7 +33,6 @@ function ProductCard({ data }) {
                 })}</h2>
                 <h2>{title}</h2>
             </div>
-
             <button type="button" onClick={handleAddCart} >add to cart</button>
         </section>
     )

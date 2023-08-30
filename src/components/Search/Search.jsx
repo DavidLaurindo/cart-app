@@ -22,7 +22,7 @@ function Search() {
     const mudandoTexto = (event) => {
         //debugger
         setSearch(event.target.value)
-        console.log("armazenando: ",event.target.value)
+        //console.log("armazenando: ",event.target.value)
     }
 
     return (
