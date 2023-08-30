@@ -1,4 +1,4 @@
-import CartButton from "../CartButton/CartButton"
+import CartButton from "../Cart/CartButton/CartButton"
 import Search from "../Search/Search"
 import "./Header.css"
 

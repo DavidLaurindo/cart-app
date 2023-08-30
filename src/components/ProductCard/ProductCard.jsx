@@ -1,7 +1,28 @@
-function ProductCard({ data }){
-    const { title, thumbnail, price } = data
+import ProductContext from "../../contexts/ProductContext"
+import { useContext } from "react"
 
-    return(
+function ProductCard({ data }) {
+    const { title, thumbnail, price, id } = data
+
+    const { cartItems, setCartItems } = useContext(ProductContext)
+
+    const handleAddCart = () => {
+
+        const existingCartItem = cartItems.find(item => item.id === id);
+
+        if (existingCartItem) {
+            // Se o produto já existe no carrinho, incrementa a quantidade
+            const updatedCartItems = cartItems.map(item =>
+                item.id === id ? { ...item, qty: item.qty + 1 } : item
+            );
+            setCartItems(updatedCartItems);
+        } else {
+            // Se o produto não existe no carrinho, adiciona como novo item
+            setCartItems([...cartItems, { ...data, qty: 1 }]);
+        }
+    }
+
+    return (
         <section>
             <img src={thumbnail} alt="product" />
             <div>
@@ -12,7 +33,7 @@ function ProductCard({ data }){
                 <h2>{title}</h2>
             </div>
 
-            <button type="button">adicionar</button>
+            <button type="button" onClick={handleAddCart} >add to cart</button>
         </section>
     )
 }

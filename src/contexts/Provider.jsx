@@ -3,10 +3,13 @@ import ProductContext from "./ProductContext"
 
 function Provider( { children }){
     const [products, setProducts] = useState([])
+    const [cartItems, setCartItems] = useState([])
 
     const value={
         products,
-        setProducts
+        setProducts,
+        cartItems,
+        setCartItems
     }
 
     return(
