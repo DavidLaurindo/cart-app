@@ -39,7 +39,6 @@ function CartItem( { data } ) {
             <div>
                 <h3>{title}</h3>
                 <h3>{qty === 1 ? normalPrice() : updatePrice(price, qty) }</h3>
-                <p>{qty}</p>
             </div>
 
             <button onClick={menos}>-</button>
