@@ -12,7 +12,8 @@ function Search() {
 
     const handleSearch = async (event) => {
         event.preventDefault()
-        console.log("chamando api: "+ search)
+        //console.log("chamando api: "+ search)
+        //console.log(event)
 
         const products = await fetchProducts(search)
         setProducts(products)
@@ -27,7 +28,7 @@ function Search() {
 
     return (
         <form onSubmit={handleSearch}>
-            <input type="text" value={search} placeholder="Buscar produtos" onChange={mudandoTexto} required />
+            <input type="text" name="pesquisa-item" value={search} placeholder="Buscar produtos" onChange={mudandoTexto} required />
             <button type="submit">Pesquisar</button>
         </form>
     )

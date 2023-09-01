@@ -7,7 +7,7 @@ function Header() {
         <header className="header">
             <Search />
             <CartButton />
-            </header>
+        </header>
     )
 }
 
