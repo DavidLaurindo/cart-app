@@ -2,25 +2,25 @@ import { useContext } from "react"
 import ProductContext from "../../../contexts/ProductContext"
 import AmountButton from "../AmountButton/AmountButton"
 
-function CartItem( { data } ) {
+function CartItem({ data }) {
 
     const { thumbnail, title, price, qty } = data
-    
-    function updatePrice(preco, quantidade){
+
+    function updatePrice(preco, quantidade) {
         const unidadeValor = preco * quantidade
         return unidadeValor.toLocaleString(
             'pt-br', {
-                style: 'currency',
-                currency: 'BRL',
-            }
+            style: 'currency',
+            currency: 'BRL',
+        }
         )
     }
-    function normalPrice(){
+    function normalPrice() {
         return price.toLocaleString(
             'pt-br', {
-                style: 'currency',
-                currency: 'BRL',
-            }
+            style: 'currency',
+            currency: 'BRL',
+        }
         )
     }
 
@@ -29,9 +29,11 @@ function CartItem( { data } ) {
             <img src={thumbnail} alt="imagem do produto" />
             <div>
                 <h3>{title}</h3>
-                <h3>{qty === 1 ? normalPrice() : updatePrice(price, qty) }</h3>
+                <h3>{qty === 1 ? normalPrice() : updatePrice(price, qty)}</h3>
             </div>
-            <AmountButton data={data} />
+            <div className="containerAmountButton">
+                <AmountButton data={data} />
+            </div>
         </section>
     )
 }

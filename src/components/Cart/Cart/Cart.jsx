@@ -1,8 +1,8 @@
-import './Cart.css'
 import CartItem from "../CartItem/CartItem"
 import { useContext } from 'react'
 import ProductContext from '../../../contexts/ProductContext'
 import Total from '../Total/Total'
+import { Section, Button } from './Cart.styles.js'
 
 
 function Cart() {
@@ -12,13 +12,15 @@ function Cart() {
         <CartItem key={item.id} data={item} />
 
     return (
-        <section className='cart'>
+        <Section>
             <div>
                 {cartItems.map(fn)}
             </div>
             <div>Resumo do carrinho</div>
             <Total />
-        </section>
+            <Button>Clear basket</Button>
+            <Button variant="primary">Pay</Button>
+        </Section>
     )
 }
 

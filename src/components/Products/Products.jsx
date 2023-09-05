@@ -1,8 +1,8 @@
 import { useContext, useEffect, useState } from "react"
 import fetchProducts from "../../api/fetchProducts"
-import './Products.css'
 import ProductCard from "../ProductCard/ProductCard"
 import ProductContext from "../../contexts/ProductContext"
+import { ContainerProducts } from "./products.styles"
 
 
 function Products() {
@@ -15,12 +15,12 @@ function Products() {
     }, [])
 
     return (
-        <section>
+        <ContainerProducts>
             {
                 products.map((product) => <ProductCard 
                 key={product.id} data={product}/>)
             }
-        </section>
+        </ContainerProducts>
     )
 }
 

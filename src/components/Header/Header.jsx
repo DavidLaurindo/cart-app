@@ -1,13 +1,13 @@
 import CartButton from "../Cart/CartButton/CartButton"
 import Search from "../Search/Search"
-import "./Header.css"
+import { StyledContainerHeader } from "./styles"
 
 function Header() {
     return (
-        <header className="header">
+        <StyledContainerHeader>
             <Search />
             <CartButton />
-        </header>
+        </StyledContainerHeader>
     )
 }
 
