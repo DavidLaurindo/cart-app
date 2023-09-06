@@ -30,8 +30,9 @@ function Search() {
 
     return (
         <FormSearch onSubmit={handleSearch}>
-            <input type="text" name="pesquisa-item" value={search} placeholder="Search" onChange={mudandoTexto} required />
             <button type="submit"><GoSearch /></button>
+            <input type="text" name="pesquisa-item" value={search} 
+            placeholder="Search" onChange={mudandoTexto} required />   
         </FormSearch>
     )
 }

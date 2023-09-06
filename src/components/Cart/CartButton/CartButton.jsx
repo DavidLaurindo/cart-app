@@ -1,5 +1,6 @@
 import { useContext, useEffect, useState } from "react"
 import ProductContext from "../../../contexts/ProductContext"
+import { StyledCartButton } from "./CartButton.styles"
 
 function CartButton() {
     const { cartItems } = useContext(ProductContext)
@@ -11,9 +12,14 @@ function CartButton() {
     }, [cartItems])
 
     return (
-        <button type="button">Cart
-            <span>{qtyCart}</span>
-        </button>
+        <StyledCartButton>
+            <h2>Cart</h2>
+            {qtyCart > 0 ? (
+            <button type="button">
+                <span>{qtyCart}</span>
+            </button>
+            ) : null}
+        </StyledCartButton>
     )
 }
 

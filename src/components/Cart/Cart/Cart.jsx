@@ -2,7 +2,9 @@ import CartItem from "../CartItem/CartItem"
 import { useContext } from 'react'
 import ProductContext from '../../../contexts/ProductContext'
 import Total from '../Total/Total'
-import { Section, Button } from './Cart.styles.js'
+import { StyledCart } from './Cart.styles.js'
+import Button from "../../Button/Button"
+import CartButton from "../CartButton/CartButton"
 
 
 function Cart() {
@@ -12,15 +14,18 @@ function Cart() {
         <CartItem key={item.id} data={item} />
 
     return (
-        <Section>
-            <div>
-                {cartItems.map(fn)}
-            </div>
-            <div>Resumo do carrinho</div>
-            <Total />
-            <Button>Clear basket</Button>
-            <Button variant="primary">Pay</Button>
-        </Section>
+        <StyledCart>
+            <div className="display-cart"><CartButton /></div>
+            <section>
+                <div>
+                    {cartItems.map(fn)}
+                </div>
+                <div>Resumo do carrinho</div>
+                <Total />
+                <Button>Clear basket</Button>
+                <Button variant="primary">Pay</Button>
+            </section>
+        </StyledCart>
     )
 }
 
