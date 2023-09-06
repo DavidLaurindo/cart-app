@@ -16,7 +16,7 @@ max-width: 370px;
 background-color: #2F3038;
 height: 100vh;
 position: fixed;
-top: 62px;
+top: 80px;
 right: 0;
 `
 
