@@ -1,5 +1,6 @@
 import { useContext } from "react"
 import ProductContext from "../../../contexts/ProductContext"
+import { GroupButton } from "./amount.styles"
 
 function AmountButton({ data }) {
 
@@ -15,11 +16,11 @@ function AmountButton({ data }) {
     }
 
     return (
-        <>
-            <button onClick={menos}>-</button>
+        <GroupButton>
+            <button className="button-esquerda" onClick={menos}>-</button>
             <span>{data.qty}</span>
-            <button onClick={mais}>+</button>
-        </>
+            <button className="button-direita" onClick={mais}>+</button>
+        </GroupButton>         
     )
 }
 export default AmountButton
