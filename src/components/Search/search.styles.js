@@ -4,7 +4,7 @@ export const FormSearch = styled.form`
 border: 1px solid #E6E6E6;
 border-radius: 100px;
 width: 180px;
-height: 30px;
+height: 35px;
 display: flex;
 justify-content: center;
 align-items: center;

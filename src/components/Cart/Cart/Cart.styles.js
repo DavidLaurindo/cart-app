@@ -9,7 +9,7 @@ top: 0;
 right: 0;
 
 section{
-    padding: 20px;
+    padding: 10px;
 }
 .display-cart{
     display: flex;
