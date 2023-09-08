@@ -1,9 +1,11 @@
 import { useState } from "react"
 import fetchProducts from "../../api/fetchProducts"
+import { GoSearch } from "react-icons/go";
 
 //CONTEXT:
 import { useContext } from "react"
 import ProductContext from "../../contexts/ProductContext"
+import { FormSearch } from "./search.styles"
 
 
 function Search() {
@@ -27,10 +29,11 @@ function Search() {
     }
 
     return (
-        <form onSubmit={handleSearch}>
-            <input type="text" name="pesquisa-item" value={search} placeholder="Buscar produtos" onChange={mudandoTexto} required />
-            <button type="submit">Pesquisar</button>
-        </form>
+        <FormSearch onSubmit={handleSearch}>
+            <button type="submit"><GoSearch /></button>
+            <input type="text" name="pesquisa-item" value={search} 
+            placeholder="Search" onChange={mudandoTexto} required />   
+        </FormSearch>
     )
 }
 
