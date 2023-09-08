@@ -1,6 +1,7 @@
 import { useContext } from "react"
 import ProductContext from "../../../contexts/ProductContext"
 import AmountButton from "../AmountButton/AmountButton"
+import { StyledSection } from "./cartItem.styles"
 
 function CartItem({ data }) {
 
@@ -25,7 +26,7 @@ function CartItem({ data }) {
     }
 
     return (
-        <section>
+        <StyledSection>
             <img src={thumbnail} alt="imagem do produto" />
             <div>
                 <h3>{title}</h3>
@@ -34,7 +35,7 @@ function CartItem({ data }) {
             <div className="containerAmountButton">
                 <AmountButton data={data} />
             </div>
-        </section>
+        </StyledSection>
     )
 }
 
