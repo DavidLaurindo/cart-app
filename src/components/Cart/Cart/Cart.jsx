@@ -19,8 +19,10 @@ function Cart() {
                 <div>
                     {cartItems.map(fn)}
                 </div>
-                <Total />
             </section>
+            <div className="ajustar-posicao">
+                <Total />
+            </div>
         </StyledCart>
     )
 }

@@ -17,5 +17,9 @@ section{
     height: 80px;
     border: 1px solid black;
 }
+.ajustar-posicao{
+    display: flex;
+    justify-content: center;
+}
 `
 

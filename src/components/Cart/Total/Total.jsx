@@ -27,17 +27,17 @@ export default function Total() {
                         <td>R$10.00</td>
                     </tr>
                     <tr>
-                        <td><h2>Total Amount: </h2></td>
+                        <td>Total Amount: </td>
                         <td>
-                            <p>{totalCarrinho.toLocaleString('pt-br', {
+                            <h2>{totalCarrinho.toLocaleString('pt-br', {
                                 style: 'currency',
                                 currency: 'BRL',
-                            })}</p>
+                            })}</h2>
                         </td>
                     </tr>
                 </tbody>
             </table>
-            <div className="buttons">
+            <div className="button-components">
                 <Button>Clear basket</Button>
                 <Button variant="primary">Pay</Button>
             </div>
