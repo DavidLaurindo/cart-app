@@ -1,6 +1,7 @@
 import { useContext } from "react"
 import ProductContext from "../../../contexts/ProductContext"
 import AmountButton from "../AmountButton/AmountButton"
+import { StyledSection } from "./cartItem.styles"
 
 function CartItem({ data }) {
 
@@ -25,16 +26,24 @@ function CartItem({ data }) {
     }
 
     return (
-        <section>
-            <img src={thumbnail} alt="imagem do produto" />
-            <div>
-                <h3>{title}</h3>
-                <h3>{qty === 1 ? normalPrice() : updatePrice(price, qty)}</h3>
+        <StyledSection>
+            <div className="product-item">
+                <div className="coluna-01">
+                    <img src={thumbnail} alt="imagem do produto" />
+                </div>
+                <div className="coluna-02">
+                    <h3>{title}</h3>
+                </div>
+                <div className="coluna-03">
+                    <h3>
+                        {qty === 1 ? normalPrice() : updatePrice(price, qty)}
+                    </h3>
+                </div>
             </div>
             <div className="containerAmountButton">
                 <AmountButton data={data} />
             </div>
-        </section>
+        </StyledSection>
     )
 }
 
