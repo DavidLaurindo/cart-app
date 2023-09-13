@@ -18,6 +18,7 @@ tr{
 }
 td{
     margin: 10px;
+    color: #ffffff;
 }
 table{
     border-bottom: 1px solid black;

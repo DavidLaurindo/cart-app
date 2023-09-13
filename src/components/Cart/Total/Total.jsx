@@ -19,7 +19,7 @@ export default function Total() {
                     <tr>
                         <td>Discount</td>
                         <td>
-                            <button>+ Add</button>
+                            <Button size="small">+ Add</Button>
                         </td>
                     </tr>
                     <tr>
@@ -38,8 +38,8 @@ export default function Total() {
                 </tbody>
             </table>
             <div className="button-components">
-                <Button>Clear basket</Button>
-                <Button variant="primary">Pay</Button>
+                <Button size="large">Clear basket</Button>
+                <Button variant="primary" size="large">Pay</Button>
             </div>
         </StyledSection>
     )
