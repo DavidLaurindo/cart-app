@@ -3,7 +3,6 @@ import { useContext } from 'react'
 import ProductContext from '../../../contexts/ProductContext'
 import Total from '../Total/Total'
 import { StyledCart } from './Cart.styles.js'
-import Button from "../../Button/Button"
 import CartButton from "../CartButton/CartButton"
 
 
@@ -20,11 +19,10 @@ function Cart() {
                 <div>
                     {cartItems.map(fn)}
                 </div>
-                <div>Resumo do carrinho</div>
-                <Total />
-                <Button>Clear basket</Button>
-                <Button variant="primary">Pay</Button>
             </section>
+            <div className="ajustar-posicao">
+                <Total />
+            </div>
         </StyledCart>
     )
 }
