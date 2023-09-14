@@ -1,7 +1,7 @@
 import styled from "styled-components"
 
 export const StyledSection = styled.section`
-background-color: #2E2C30;
+background: linear-gradient(to top, #1C1A1E, #2E2C30);
 position: fixed;
 bottom: 0;
 border-top: 1px solid black;
@@ -18,16 +18,22 @@ tr{
 }
 td{
     margin: 10px;
+    padding: 5px;
     color: #ffffff;
+    font-size: 16px;
 }
 table{
-    border-bottom: 1px solid black;
     width: 100%;
     height: 100%;  
 }
 .button-components{
+    display: flex;
+    align-items: center;
+    justify-content: center;
     width: 100%;
     height: 100%;
-    margin-top: 10px;
+    padding-top: 20px;
+    margin-bottom: 20px;
+    border-top: 1px solid black;
 }
 `

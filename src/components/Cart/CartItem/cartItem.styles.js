@@ -29,7 +29,7 @@ h3, h2{
     color: #F2F2F2;
 
     //Pesquisar Fonte correta:
-    font-family: Arial, Helvetica, sans-serif;
+    //font-family: Arial, Helvetica, sans-serif;(já globalmente)
     font-weight: lighter;
     font-size: 17px;
 }
