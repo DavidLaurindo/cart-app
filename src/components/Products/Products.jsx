@@ -17,7 +17,7 @@ function Products() {
     return (
         <ContainerProducts>
             {
-                products.map((product) => <ProductCard 
+                products.slice(0,3).map((product) => <ProductCard 
                 key={product.id} data={product}/>)
             }
         </ContainerProducts>
