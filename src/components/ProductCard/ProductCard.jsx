@@ -1,5 +1,6 @@
 import ProductContext from "../../contexts/ProductContext"
 import { useContext } from "react"
+import { StyledSection } from "./ProductCard.styles"
 
 function ProductCard({ data }) {
     const { title, thumbnail, price, id } = data
@@ -24,17 +25,19 @@ function ProductCard({ data }) {
     }
 
     return (
-        <section>
-            <img src={thumbnail} alt="product" />
+        <StyledSection>
+            <div className="img-button-container">
+                <button type="button" onClick={handleAddCart} >add to cart</button>
+                <img src={thumbnail} alt="product" />
+            </div>
             <div>
-                <h2>R$ {price.toLocaleString('pt-br', {
+                <h4>{title}</h4>
+                <h3>{price.toLocaleString('pt-br', {
                     style: 'currency',
                     currency: 'BRL',
-                })}</h2>
-                <h2>{title}</h2>
+                })}</h3>
             </div>
-            <button type="button" onClick={handleAddCart} >add to cart</button>
-        </section>
+        </StyledSection>
     )
 }
 

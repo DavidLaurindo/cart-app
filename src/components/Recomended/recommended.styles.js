@@ -8,4 +8,9 @@ padding: 32px;
     display: flex;
     justify-content: space-between;
 }
+.products-section{
+    margin-top: 32px;
+    display: flex;
+    justify-content: center;
+}
 `
